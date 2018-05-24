@@ -97,11 +97,13 @@
         var getInput = document.getElementById('taskInput');
         var inputValueStorage = [];
         var getBtn = document.getElementById('addBtn');
+        var getTask = document.querySelector('.taskCol');
+        var hello = getTask.parentNode;
 
         // Click function
         getBtn.addEventListener('click', addToList , false);
 
-        function addToList(e) {
+        function addToList() {
           // Pushes the input value to the 'inputValueStorage' array
           inputValueStorage.push(getInput.value);
 
@@ -111,7 +113,10 @@
           // The array is cleared
           inputValueStorage.pop();
         }
-        // console.dir(e);
+
+        console.dir(hello);
+
+
 
       }());
     </script>
