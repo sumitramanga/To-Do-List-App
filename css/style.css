@@ -1,0 +1,118 @@
+body {
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* HEADER */
+.container1 {
+ background: linear-gradient(#f2709c, #ff9472);
+}
+
+.title {
+ height: 5rem;
+ font-family: 'Poiret One', sans-serif;
+ text-align: center;
+ color: white;
+}
+
+h3 {
+ font-size: 2.3rem;
+ margin: 0;
+ text-align: center;
+}
+
+/* ---------------------------------------------------------------- */
+
+/* TASK */
+.box {
+ padding: 20px 12px;
+ margin: 30px 15px;
+ background-color: #FFC877;
+ box-shadow: 0px 0px 18px 1px #FFC877;
+ border: 1px solid #FFC877;
+ border-radius: 13px;
+ color: white;
+}
+
+/* Trash Button */
+.clearTaskBtn {
+  float: left;
+  /* margin-right: 21px;
+  margin-top: 2%; */
+  font-size: 23px;
+}
+
+/* Task Name */
+.form-check-label {
+  font-size: 0.9rem;
+  /* text-align: center; */
+  /* width: 146px; */
+}
+
+.col-8, .taskCol{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* .col-8 {
+  background-color: blue;
+}
+
+.taskCol {
+  background-color: pink;
+} */
+
+/* Checkbox */
+.form-check-input {
+ /* border: 5px solid black; */
+ margin-top: 0;
+ margin-left: -0.5rem;
+}
+
+/* ---------------------------------------------------------------- */
+
+/* MODAL */
+
+/*Show modal button */
+.plusIcon {
+ color: white;
+ font-size: 28px;
+}
+
+.plusIcon:hover {
+ color: white;
+}
+
+.btn-outline-dark:focus {
+ box-shadow: none;
+}
+
+.btn-outline-dark:hover {
+ background: linear-gradient(#f2709c, #ff9472);
+ border-color: transparent;
+}
+
+.btn-outline-dark {
+ position: fixed;
+ bottom: 23px;
+ right: 26px;
+ border-radius: 30px;
+ border: 3px solid #f2709c;
+ background: linear-gradient(#f2709c, #ff9472);
+ padding: 0.5rem 0.8rem;
+}
+
+/* Add button */
+.btn-primary, .btn-primary:hover{
+ background: linear-gradient(to bottom right, #f2709c, #ff9472);
+ border-color: #FF9F78;
+}
+
+.modal-content {
+ border: none;
+}
+
+/* Close button */
+.close {
+ color: #FFC903;
+}
