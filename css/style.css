@@ -44,7 +44,6 @@ h3 {
 /* Task Name */
 .form-check-label {
   font-size: 0.9rem;
-  /* text-align: center; */
   /* width: 146px; */
 }
 
@@ -54,19 +53,15 @@ h3 {
     justify-content: center;
 }
 
-/* .col-8 {
-  background-color: blue;
-}
-
-.taskCol {
-  background-color: pink;
-} */
-
 /* Checkbox */
 .form-check-input {
- /* border: 5px solid black; */
  margin-top: 0;
  margin-left: -0.5rem;
+ cursor: pointer;
+}
+
+.clearTaskBtn {
+  cursor: pointer;
 }
 
 /* ---------------------------------------------------------------- */

@@ -22,11 +22,11 @@
 
   <div class="container" id="container2">
     <div class="row box">
-      <div class="col taskCol">
+      <div class="col taskCol clearBtnContainer">
         <div class="clearTaskBtn"><i class="fas fa-times"></i></div>
       </div>
       <div class="col-8">
-        <label class="form-check-label nameOfTask" for="exampleCheck1">Dinner prep</label>
+        <label class="form-check-label" for="exampleCheck1">Dinner prep</label>
       </div>
       <div class="col taskCol">
         <input type="checkbox" class="form-check-input" id="exampleCheck1">
@@ -34,7 +34,7 @@
     </div> <!-- row ENDS -->
 
     <div class="row box">
-      <div class="col taskCol">
+      <div class="col taskCol clearBtnContainer">
         <div class="clearTaskBtn"><i class="fas fa-times"></i></div>
       </div>
       <div class="col-8">
@@ -46,7 +46,7 @@
     </div> <!-- row ENDS -->
 
     <div class="row box">
-      <div class= "col taskCol">
+      <div class= "col taskCol clearBtnContainer">
         <div class="clearTaskBtn"><i class="fas fa-times"></i></div>
       </div>
       <div class="col-8">
@@ -96,27 +96,56 @@
         var getListContainer = document.getElementById('container2');
         var getInput = document.getElementById('taskInput');
         var inputValueStorage = [];
-        var getBtn = document.getElementById('addBtn');
-        var getTask = document.querySelector('.taskCol');
-        var hello = getTask.parentNode;
+        var getAddBtn = document.getElementById('addBtn');
+
+
+        // Taking care of all the demo tasks
+        var demoTasksInit = function (){
+          var getClearBtn = document.querySelectorAll('.clearBtnContainer');
+          // For default tasks
+          for (var i = 0; i < getClearBtn.length; i++) {
+            getClearBtn[i].addEventListener('click', removeTask, false);
+          }
+        }();
+
 
         // Click function
-        getBtn.addEventListener('click', addToList , false);
+        getAddBtn.addEventListener('click', addToList , false);
 
+        // Settings for the task when added to list
         function addToList() {
           // Pushes the input value to the 'inputValueStorage' array
           inputValueStorage.push(getInput.value);
 
           // This makes the task appear in the To Do List
-          getListContainer.insertAdjacentHTML('beforeend', '<div class="row box"><div class= "col taskCol"><div class="clearTaskBtn"><i class="fas fa-times"></i></div></div><div class="col-8"><label class="form-check-label" for="exampleCheck1">' + inputValueStorage + '</label></div><div class="col taskCol"><input type="checkbox" class="form-check-input" id="exampleCheck1"></div></div>');
+          getListContainer.insertAdjacentHTML('beforeend', '<div class="row box"><div class="col taskCol clearBtnContainer"><div class="clearTaskBtn"><i class="fas fa-times"></i></div></div><div class="col-8"><label class="form-check-label nameOfTask" for="exampleCheck1">' + inputValueStorage + '</label></div><div class="col taskCol"><input type="checkbox" class="form-check-input" id="exampleCheck1"></div></div>');
 
           // The array is cleared
           inputValueStorage.pop();
+
+          // Fired function for when removing the task
+          newItemClose();
         }
 
-        console.dir(hello);
+        // Function creates the loop for removing the task when the task is added to the list on click.
+        function newItemClose () {
+          // Variable is placed inside this function to reference the clear button.
+          // It is inside a function to make the loop work when adding item to the list.
+          // This is a local variable and will not be found outside of the function.
+          var getClearBtnB = document.querySelectorAll('.clearBtnContainer');
 
+          // This is a loop.
+          for (var i = 0; i < getClearBtnB.length; i++) {
+            getClearBtnB[i].addEventListener('click', removeTask, false);
+          }
+        }
 
+        // This function removes the task
+        function removeTask() {
+          // $('.box').remove();
+          this.parentNode.style.display = 'none';
+          console.log('a');
+        }
 
       }());
     </script>
