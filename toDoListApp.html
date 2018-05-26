@@ -6,13 +6,130 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
   <link href="https://fonts.googleapis.com/css?family=Montserrat|Poiret+One" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="img/favicon.ico" type="image/x-icon">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>To Do List App</title>
+  <style media="screen">
+  body {
+    font-family: 'Montserrat', sans-serif;
+  }
+
+  /* HEADER */
+  .container1 {
+   background: linear-gradient(#f2709c, #ff9472);
+  }
+
+  .title {
+   height: 5rem;
+   font-family: 'Poiret One', sans-serif;
+   text-align: center;
+   color: white;
+  }
+
+  h3 {
+   font-size: 2.3rem;
+   margin: 0;
+   text-align: center;
+  }
+
+  /* ---------------------------------------------------------------- */
+
+  /* TASK */
+  .box {
+   padding: 20px 12px;
+   margin: 30px 15px;
+   background-color: #FFC877;
+   box-shadow: 0px 0px 18px 1px #FFC877;
+   border: 1px solid #FFC877;
+   border-radius: 13px;
+   color: white;
+  }
+
+  /* Trash Button */
+  .clearTaskBtn {
+    float: left;
+    /* margin-right: 21px;
+    margin-top: 2%; */
+    font-size: 23px;
+  }
+
+  /* Task Name */
+  .form-check-label {
+    font-size: 0.9rem;
+    /* width: 146px; */
+  }
+
+  .col-8, .taskCol{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+  }
+
+  /* Checkbox */
+  .form-check-input {
+   margin-top: 0;
+   margin-left: -0.5rem;
+   cursor: pointer;
+  }
+
+  .clearTaskBtn {
+    cursor: pointer;
+  }
+
+  /* ---------------------------------------------------------------- */
+
+  /* MODAL */
+
+  /*Show modal button */
+  .plusIcon {
+   color: white;
+   font-size: 28px;
+  }
+
+  .plusIcon:hover {
+   color: white;
+  }
+
+  .btn-outline-dark:focus {
+   box-shadow: none;
+  }
+
+  .btn-outline-dark:hover {
+   background: linear-gradient(#f2709c, #ff9472);
+   border-color: transparent;
+  }
+
+  .btn-outline-dark {
+   position: fixed;
+   bottom: 23px;
+   right: 26px;
+   border-radius: 30px;
+   border: 3px solid #f2709c;
+   background: linear-gradient(#f2709c, #ff9472);
+   padding: 0.5rem 0.8rem;
+  }
+
+  /* Add button */
+  .btn-primary, .btn-primary:hover{
+   background: linear-gradient(to bottom right, #f2709c, #ff9472);
+   border-color: #FF9F78;
+  }
+
+  .modal-content {
+   border: none;
+  }
+
+  /* Close button */
+  .close {
+   color: #FFC903;
+  }
+
+  </style>
 </head>
 
 <body>
-  <!-- Header -->
+  <!-- HEADER -->
   <div class="container container1" id="header">
     <div class="title row align-items-center">
       <div class="col">
@@ -21,7 +138,8 @@
     </div> <!-- title row ENDS -->
   </div> <!-- container ENDS -->
 
-  <!-- Main content -->
+
+  <!-- MAIN CONTENT -->
   <div class="container" id="container2">
     <div class="row box">
 
@@ -30,7 +148,24 @@
       </div>
 
       <div class="col-8">
-        <label class="form-check-label" for="exampleCheck1">Fold Laundry</label>
+        <label class="form-check-label" for="exampleCheck1">Click the plus button to add a task like this to your list</label>
+      </div>
+
+      <div class="col taskCol">
+        <input type="checkbox" class="form-check-input" id="exampleCheck1">
+      </div>
+
+    </div> <!-- row ENDS -->
+
+
+    <div class="row box">
+
+      <div class="col taskCol clearBtnContainer">
+        <div class="clearTaskBtn"><i class="fas fa-times"></i></div>
+      </div>
+
+      <div class="col-8">
+        <label class="form-check-label" for="exampleCheck1">Click the <strong>x</strong> to delete the task</label>
       </div>
 
       <div class="col taskCol">
@@ -39,6 +174,9 @@
 
     </div> <!-- row ENDS -->
   </div> <!-- container ENDS -->
+
+
+  <!-- ********************** Modal Interactions ********************** -->
 
 
   <!-- Button trigger modal -->
@@ -74,8 +212,85 @@
   </div> <!--  Modal ends -->
 
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
-  <script src="js/script.js"></script>
+  <script type="text/javascript">
+  // IIFE Begins
+  (function() {
+
+    // Global variables. inputValueStorage is to store the data that is created
+    // within the input field.
+    var getListContainer = document.getElementById('container2');
+    var getInput = document.getElementById('taskInput');
+    var inputValueStorage = [];
+    var getAddBtn = document.getElementById('addBtn');
+
+
+    //----------------------------------------------------------------------
+
+
+    // Taking care of the demo task
+    var demoTasksInit = function (){
+
+      var getClearBtn = document.querySelectorAll('.clearBtnContainer');
+
+      for (var i = 0; i < getClearBtn.length; i++) {
+        getClearBtn[i].addEventListener('click', removeTask, false);
+      }
+
+    }();
+
+
+    //----------------------------------------------------------------------
+
+
+    // Click function for the add task button
+    getAddBtn.addEventListener('click', addToList , false);
+
+    // Settings for the task when added to list
+    function addToList() {
+      // Pushes the input value to the 'inputValueStorage' array.
+      inputValueStorage.push(getInput.value);
+
+      // This makes the task appear in the To Do List with the value of the
+      // input that had been pushed into the array.
+      getListContainer.insertAdjacentHTML('beforeend', '<div class="row box"><div class="col taskCol clearBtnContainer"><div class="clearTaskBtn"><i class="fas fa-times"></i></div></div><div class="col-8"><label class="form-check-label nameOfTask" for="exampleCheck1">' + inputValueStorage + '</label></div><div class="col taskCol"><input type="checkbox" class="form-check-input" id="exampleCheck1"></div></div>');
+
+      // The array is cleared so that new tasks can be added.
+      inputValueStorage.pop();
+
+      // Fired function for when removing the task.
+      newItemClose();
+    }
+
+
+    // Function creates the loop for removing the task when the task is added
+    // to the list on click.
+    function newItemClose () {
+
+      // Variable is placed inside this function to reference the clear button.
+      // It is inside a function to make the loop work when adding item to the list.
+      // This is a local variable and will not be found outside of the function.
+      var getClearBtnB = document.querySelectorAll('.clearBtnContainer');
+
+      // This is a loop which adds the click function to the removeTask button.
+      for (var i = 0; i < getClearBtnB.length; i++) {
+        getClearBtnB[i].addEventListener('click', removeTask, false);
+      }
+    } // newItemClose button ends
+
+
+    // This function creates the removal of the task. This is done targetting
+    // The outerHTML of the clear buttons parent.
+    function removeTask() {
+
+      this.parentNode.outerHTML = '';
+      console.dir(this);
+      console.log(this + ' what is this');
+
+    }
+
+  }());
+  // IIFE Ends
+  </script>
 </body>
 </html>
