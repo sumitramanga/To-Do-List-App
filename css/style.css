@@ -7,8 +7,9 @@ body {
  background: linear-gradient(#f2709c, #ff9472);
 }
 
+/* Wrapper for h3 and date and time */
 .title {
- height: 5rem;
+ height: 5.5rem;
  font-family: 'Poiret One', sans-serif;
  text-align: center;
  color: white;
@@ -20,7 +21,30 @@ h3 {
  text-align: center;
 }
 
+/* Date and time */
+.dateAndTime {
+  display: flex;
+  justify-content: center;
+}
+
+.date, .time {
+  font-size: 14px;
+  font-family: sans-serif;
+  text-align: center;
+}
+
+.date {
+  margin-right: 10px;
+}
+
+
 /* ---------------------------------------------------------------- */
+
+
+#container2 {
+  margin-top: 30px;
+
+}
 
 /* MAIN */
 .box {
@@ -67,11 +91,14 @@ h3 {
   -o-transform: scale(1.5); /* Opera */
 }
 
+/* Task has been deleted message */
 .message {
   text-align: center;
 }
 
+
 /* ---------------------------------------------------------------- */
+
 
 /* MODAL */
 

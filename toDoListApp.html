@@ -19,6 +19,12 @@
     <div class="title row align-items-center">
       <div class="col">
         <h3>TO DO LIST</h3>
+
+        <div class="dateAndTime row">
+          <div class="date" id="getDate"></div>
+          <div class="time" id="getTime"></div>
+        </div>
+
       </div>
     </div> <!-- title row ENDS -->
   </div> <!-- container ENDS -->
@@ -28,8 +34,10 @@
   <div class="container" id="container2">
     <div class="row box">
 
-      <div class="col taskCol clearBtnContainer">
-        <div class="clearTaskBtn"><i class="fas fa-times"></i></div>
+      <div class="col taskCol clearTaskBtn clearBtnContainer">
+        <!-- <div class="clearTaskBtn"> -->
+          <i class="fas fa-times" id="icon"></i>
+        <!-- </div> -->
       </div>
 
       <div class="col-8">
@@ -45,8 +53,10 @@
 
     <div class="row box">
 
-      <div class="col taskCol clearBtnContainer">
-        <div class="clearTaskBtn"><i class="fas fa-times"></i></div>
+      <div class="col taskCol clearTaskBtn clearBtnContainer">
+        <!-- <div class="clearTaskBtn"> -->
+          <i class="fas fa-times" id="icon"></i>
+        <!-- </div> -->
       </div>
 
       <div class="col-8">
@@ -95,6 +105,8 @@
       </div> <!-- modal-content -->
     </div> <!-- modal-dialog ends-->
   </div> <!--  Modal ends -->
+
+  <!-- <div class="row box"><div class="col taskCol clearTaskBtn clearBtnContainer"><i class="fas fa-times"></i></div><div class="col-8"><label class="form-check-label nameOfTask" for="exampleCheck1">' + inputValueStorage + '</label></div><div class="col taskCol"><input type="checkbox" class="form-check-input" id="exampleCheck1"></div></div> -->
 
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js" crossorigin="anonymous"></script>
