@@ -128,5 +128,37 @@
     });
   }
 
+//----------------------------------------------------------------------------
+
+  // Saving the to do list in users browser
+
+  // // Shorthand for localStorage
+  // var ls = window.localStorage;
+  //
+  // // Check for local data, then apply
+  // if (ls.getItem("data")) {
+  //   $(".col-8").text(ls.getItem("data"));
+  // }
+  //
+  // // Save text
+  // $("body").on('click', function() {
+  //   ls.setItem("data", $(".col-8").text());
+  // });
+
+
+// var listItem = document.getElementsByClassName('box');
+//
+// ls.setItem(listItem , getTaskName);
+// var taste = ls.getItem(listItem);
+// console.log(taste);
+//
+// console.log(listItem);
+//
+//
+//
+// console.log(ls);
+// console.log('alive');
+
+
 }());
 // IIFE Ends
